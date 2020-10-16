@@ -86,7 +86,6 @@ th {
 			<th>금</th>
 			<th>토</th>
 		</tr>
-		<!-- 
 		<tr>
 			<th>오전</th>
 			<td><c:if test="${ma==1 }">O</c:if></td>

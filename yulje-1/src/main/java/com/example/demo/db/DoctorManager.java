@@ -8,9 +8,10 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
+import com.example.demo.vo.Doc_ScheduleVo;
 import com.example.demo.vo.DoctorVo;
 
-public class DBManager {
+public class DoctorManager {
 	
 	private static SqlSessionFactory sqlSessionFactory;
 	
@@ -26,7 +27,8 @@ public class DBManager {
 		}
 	}
 	
-	public static List<DoctorVo> findAll() {
+	//doctor list
+	public static List<DoctorVo> findAllDoc() {
 		List<DoctorVo> list = null;
 		SqlSession session = sqlSessionFactory.openSession();
 		list = session.selectList("doctor.selectAll");
@@ -34,11 +36,20 @@ public class DBManager {
 		return list;
 	}
 	
-	public static DoctorVo findByNo(int doc_no) {
+	public static DoctorVo findByNoDoc(int doc_no) {
 		DoctorVo d = null;
 		SqlSession session = sqlSessionFactory.openSession();
 		d = session.selectOne("doctor.selectByNo", doc_no);
 		session.close();
 		return d;
+	}
+	
+	//doc-sche list
+	public static List<Doc_ScheduleVo> findAllSche(int doc_no){
+		List<Doc_ScheduleVo> list = null;
+		SqlSession session = sqlSessionFactory.openSession();
+		list = session.selectList("sche.selectByNo", doc_no);
+		session.close();
+		return list;
 	}
 }

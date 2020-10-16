@@ -6,6 +6,11 @@
 	<properties resource="com/example/demo/db/db.properties"/>
 	<typeAliases>
 		<typeAlias type="com.example.demo.vo.DoctorVo" alias="doctorVo"/>
+		<typeAlias type="com.example.demo.vo.DoctorVo" alias="scheVo"/>
+		<typeAlias type="com.example.demo.vo.DoctorVo" alias="carVo"/>
+		<typeAlias type="com.example.demo.vo.DoctorVo" alias="eduVo"/>
+		<typeAlias type="com.example.demo.vo.DoctorVo" alias="noticeVo"/>
+		<typeAlias type="com.example.demo.vo.DoctorVo" alias="adviceVo"/>
 	</typeAliases>
   <environments default="development">
     <environment id="development">
@@ -20,5 +25,10 @@
   </environments>
   <mappers>
     <mapper resource="com/example/demo/db/DoctorMapper.xml"/>
+    <mapper resource="com/example/demo/db/Doc_ScheduleMapper.xml"/>
+<!--     <mapper resource="com/example/demo/db/Doc_EducationMapper.xml"/> -->
+<!--     <mapper resource="com/example/demo/db/Doc_CareerMapper.xml"/> -->
+<!--     <mapper resource="com/example/demo/db/AdviceMapper.xml"/> -->
+<!--     <mapper resource="com/example/demo/db/NoticeMapper.xml"/> -->
   </mappers>
 </configuration>
