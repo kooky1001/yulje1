@@ -6,11 +6,11 @@
 	<properties resource="com/example/demo/db/db.properties"/>
 	<typeAliases>
 		<typeAlias type="com.example.demo.vo.DoctorVo" alias="doctorVo"/>
-		<typeAlias type="com.example.demo.vo.DoctorVo" alias="scheVo"/>
-		<typeAlias type="com.example.demo.vo.DoctorVo" alias="carVo"/>
-		<typeAlias type="com.example.demo.vo.DoctorVo" alias="eduVo"/>
-		<typeAlias type="com.example.demo.vo.DoctorVo" alias="noticeVo"/>
-		<typeAlias type="com.example.demo.vo.DoctorVo" alias="adviceVo"/>
+		<typeAlias type="com.example.demo.vo.Doc_ScheduleVo" alias="scheVo"/>
+		<typeAlias type="com.example.demo.vo.Doc_CareerVo" alias="carVo"/>
+		<typeAlias type="com.example.demo.vo.Doc_EducationVo" alias="eduVo"/>
+		<typeAlias type="com.example.demo.vo.NoticeVo" alias="noticeVo"/>
+		<typeAlias type="com.example.demo.vo.AdviceVo" alias="adviceVo"/>
 	</typeAliases>
   <environments default="development">
     <environment id="development">
