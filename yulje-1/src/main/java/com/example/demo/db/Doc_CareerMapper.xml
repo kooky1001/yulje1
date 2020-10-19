@@ -3,10 +3,10 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="car">
-  <select id="selectAll" resultType="doctorVo">
-    select * from doctor
+  <select id="selectAll" resultType="carVo">
+    select * from doc_career where doc_no=#{doc_no} order by car_sdate desc
   </select>
-  <select id="selectByNo" resultType="doctorVo">
-  	select * from doctor where doc_no=#{doc_no}
-  </select>
+  <insert id="insert">
+  	insert into doc_career values(#{car_no},#{car_sdate},#{car_edate},#{car_content},#{doc_no})
+  </insert>
 </mapper>

@@ -46,7 +46,7 @@ th {
 </head>
 <body>
 
-	<img src="./image/${d.doc_fname }" class="img" align="left" vspace="20" hspace="20">	
+	<img src="./WEB-INF/image/${d.doc_fname }" class="img" align="left" vspace="20" hspace="20">
 
 	<h2> 의사 소개_<font id="major">${d.major }</h2>
 	
@@ -118,8 +118,8 @@ th {
 			</tr>
 		</c:forEach>
 	</table> 
-	-->
-	<!-- 
+	 -->
+	
 	<hr>
 	경력<br>
 	<table>
@@ -151,7 +151,7 @@ th {
 				<td>${e.edu_content }</td>
 			</tr>
 		</c:forEach>
-		 -->
+		
 	</table>
 	<hr>
 	<a href="listDoctor.do?dept_no=${d.dept_no }"><input type="button" value="목록"></a>

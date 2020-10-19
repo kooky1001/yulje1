@@ -9,6 +9,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.example.demo.dao.Doc_CareerDao;
+import com.example.demo.dao.Doc_EducationDao;
 import com.example.demo.dao.Doc_ScheduleDao;
 import com.example.demo.dao.DoctorDao;
 import com.example.demo.vo.Doc_ScheduleVo;
@@ -22,15 +24,20 @@ public class DoctorController {
 	
 	@Autowired
 	private DoctorDao dao;
-	
 	@Autowired
 	private Doc_ScheduleDao sdao;
+	@Autowired
+	private Doc_EducationDao edao;
+	@Autowired
+	private Doc_CareerDao cdao;
 	
 	@RequestMapping("/detailDoctor")
 	public ModelAndView detail(int doc_no) {
 		ModelAndView mav = new ModelAndView();
 		DoctorVo d = dao.findByNo(doc_no);
 		mav.addObject("d", d);
+		mav.addObject("clist", cdao.findAllCar(doc_no));
+		mav.addObject("elist", edao.findAllEdu(doc_no));
 		
 		List<Doc_ScheduleVo> slist = sdao.findAllSche(doc_no);
 		for (Doc_ScheduleVo s : slist) {
@@ -76,10 +83,7 @@ public class DoctorController {
 			}
 		}
 		
-		
 		return mav;
 	}
 	
-	@RequestMapping("/test")
-	public void test() {}
 }

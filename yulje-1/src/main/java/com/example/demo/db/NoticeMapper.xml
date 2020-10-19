@@ -3,10 +3,25 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="notice">
-  <select id="selectAll" resultType="doctorVo">
-    select * from doctor
+  <select id="selectAll" resultType="noticeVo">
+    select no,title,content,regdate,hit,fname from (select rownum n,no,title,content,regdate,hit,fname from 
+    (select * from notice order by no desc)) where n between #{start} and #{end}
   </select>
-  <select id="selectByNo" resultType="doctorVo">
-  	select * from doctor where doc_no=#{doc_no}
+  <select id="selectByNo" resultType="noticeVo">
+  	select * from notice where no=#{no}
   </select>
+  <select id="getNextNo" resultType="java.lang.Integer">
+  	select nvl(max(no),0)+1 from notice
+  </select>
+  <select id="getTotalRecord" resultType="java.lang.Integer">
+  	select count(*) from notice
+  </select>
+  
+  <update id="updateHit">
+  	update notice set hit=hit+1 where no=#{no}
+  </update>
+  
+  <insert id="insert">
+  	insert into notice values(#{no},#{title},#{content},sysdate,0,#{fname})
+  </insert>
 </mapper>

@@ -7,6 +7,6 @@
     select * from doc_Education where doc_no=#{doc_no} order by edu_sdate desc
   </select>
   <insert id="insert">
-  	insert into doctor values(#{sche_no},#{workday},#{am_pm},#{doc_no})
+  	insert into doc_education values(#{edu_no},#{edu_sdate},#{edu_edate},#{edu_content},#{doc_no})
   </insert>
 </mapper>
