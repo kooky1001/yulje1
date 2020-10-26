@@ -257,7 +257,7 @@
   		</div>
   		
   		<div id="bot">
-  			<button id="join" class="btn">가입하기</button>
+  			<button id="join" class="btn"><a href="main.jsp">가입하기</a></button>
   			<button id="cancel" class="btn">취소</button>
   		</div>
   		

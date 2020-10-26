@@ -423,7 +423,7 @@
 		  			<h2>예약현황</h2><br>
 		  			<h3>0건</h3>
 		  			<div>
-		  				<button id="btn_mypage_reserve"><a href="updateMember.jsp">예약확인</a></button>
+		  				<button id="btn_mypage_reserve"><a href="/reserconfirm">예약확인</a></button>
 		  			</div>
 		  		</div>
 		  		<div id="mypage_notice">

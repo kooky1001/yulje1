@@ -478,9 +478,9 @@ $(function() {
 <body>
 
    
-   <div class="header">
-     <h2>Header</h2>
-   </div>
+  <!-- Header Start -->
+     <jsp:include page="/header.jsp"></jsp:include>
+<!-- 	Header End -->
    
 
    <div class="column-side-left" style="background-color:#aaa;">Column</div>
