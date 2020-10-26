@@ -213,7 +213,7 @@
 	<a href="updateAdvice.do?no=${a.no }"><input type="button" value="수정"></a>
 	<a href="deleteAdvice.do?no=${a.no }"><input type="button" value="삭제"></a><br> 
 	-->
-	<a href="listNotice.do"><input type="button" value="목록"></a>
+	<a href="listNotice"><input type="button" value="목록"></a>
 </div>
 </div>
 

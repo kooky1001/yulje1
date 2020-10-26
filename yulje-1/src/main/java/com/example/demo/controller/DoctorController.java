@@ -2,8 +2,6 @@ package com.example.demo.controller;
 
 import java.util.List;
 
-import javax.servlet.http.HttpServletRequest;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -31,7 +29,7 @@ public class DoctorController {
 	@Autowired
 	private Doc_CareerDao cdao;
 	
-	@RequestMapping("/detailDoctor")
+//	@RequestMapping("/detailDoctor")
 	public ModelAndView detail(int doc_no) {
 		ModelAndView mav = new ModelAndView();
 		DoctorVo d = dao.findByNo(doc_no);
@@ -86,4 +84,21 @@ public class DoctorController {
 		return mav;
 	}
 	
+	@RequestMapping("/detailDoctor")
+	public void detail() {}
+	
+	@RequestMapping("/listDoctor")
+	public void list() {}
+	
+	@RequestMapping("/join")
+	public void join() {}
+	
+	@RequestMapping("/join-allow")
+	public void allow() {}
+	
+	@RequestMapping("/reserconfirm")
+	public void confirm() {}
+	
+	@RequestMapping("/res")
+	public void confirms() {}
 }

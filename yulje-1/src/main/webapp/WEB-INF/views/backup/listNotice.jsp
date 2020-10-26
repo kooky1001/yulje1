@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>    
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,14 +9,26 @@
 <link rel="stylesheet" href="sidenav.css">
 <link rel="stylesheet" href="header.css">
 <title>Insert title here</title>
-</head>
 <style>
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
 
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:hover {background-color:#f5f5f5;}
+
+* {
+  box-sizing: border-box;
+}
 </style>
-<title>Insert title here</title>
 </head>
 <body>
-
 <body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" vlink="black">
     <div id="container">
 	<div class="header">
@@ -189,9 +201,11 @@
 	</div>
 </div>
 
+
+
 <div class="stitle">
 	<h2>공지사항</h2>
-	</div>
+</div>
 <div id="smain">
 <div class="sidenav">
   <a href="main.do">메인으로</a>
@@ -201,24 +215,32 @@
   <a href="listComplimentBoard.do">감사합니다</a>
   <a href="listSuggestionBoard.do">건의합니다</a>
 </div>
-
 <div class="content">
-<h2>공지사항 등록</h2>
-	<hr>
-	<img src="pp.png" widht="400" height="150">
-	<hr>
-	<form action="insertNoticeOk.do" method="post" enctype="multipart/form-data">
-		<input type="hidden" name="no" value="${no }">
-		 글제목 : <input type="text" name="title"><br>
-		 글내용 : <br>
-		 <textarea rows="10" cols="60" name="content" ></textarea><br>
-		 첨부파일 : <input type="file" name="fname"><br>
-		 <input type="submit" value="등록">
-		 <input type="reset" value="취소">
-	</form>
+<%-- 	<c:if test="${member_no==3 }"> --%>
+	<a href="insertNotice"><input type="button" value="등록"></a>
+<%-- 	</c:if> --%>
+	<table>
+		<tr>
+			<th>번호</th>
+			<th>제목</th>
+			<th>등록일</th>
+			<th>조회수</th>
+		</tr>
+		<c:forEach var="n" items="${list }">
+			<tr>
+				<td>${n.no }</td>
+				<td>
+				<a href="detailNotice?no=${n.no }">${n.title }</a>
+				</td>
+				<td>${n.regdate }</td>
+				<td>${n.hit }</td>
+			</tr>
+		</c:forEach>
+	</table>
+	<br>
+	${pageStr }
 </div>
 </div>
-
 <!-- Footer -->
 		<footer id="footer">
 		<div class="inner">
@@ -265,24 +287,6 @@
 			</div>
 		</div>
 		</footer>
-		<!-- footer_menu -->
-		<!-- 
-		<div class="footer-menu">
-			<div class="inner">
-				<ul class="clearfix">
-					<li><a href="/ilsan/reservation/reservation.asp"><i class="ico ico-cal5"></i>진료예약</a></li>
-					<li><a href="/ilsan/reservation/schedule.asp" onclick="open(this.href, '_swin_', 'width=1120,height=800,scrollbars,resizable');return false;"><i class="ico ico-magnifying"></i>진료시간표</a></li>
-					<li><a href="/ilsan/treatment/treatment_parts.asp"><i class="ico ico-stethoscope"></i>진료과</a></li>
-					<li><a href="/ilsan/treatment/center_clinic.asp?tabIndex=0"><i class="ico ico-hospital"></i>전문진료센터</a></li>
-					<li><a href="/ilsan/treatment/center_clinic.asp?tabIndex=1"><i class="ico ico-building"></i>전문클리닉</a></li>
-					<li><a href="/ilsan/info/tell_info.asp"><i class="ico ico-phone"></i>전화번호안내</a></li>
-					<li><a href="/ilsan/info/direction.asp"><i class="ico ico-pin"></i>오시는길</a></li>
-				</ul>
-				<a href="/ilsan/main.asp" class="btn-home"><i class="ico ico-home"></i>HOME</a>
-				<button type="button" class="btn-top"><i class="ico ico-top"></i>TOP</button>
-			</div>
-		</div>
-		 -->
-	</footer>
+
 </body>
 </html>
