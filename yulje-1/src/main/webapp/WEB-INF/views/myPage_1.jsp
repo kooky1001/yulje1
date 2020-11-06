@@ -5,6 +5,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script src="https://kit.fontawesome.com/eef195c997.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="header.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 	* {
@@ -18,12 +20,9 @@
 		width: 819px;
 		height: 800px;
 		border: 1px solid #EAEAEA;
-		z-index: 5px;
+		z-index: 5px;	
 		margin-top: 200px;
-	
-	}
-	
-	
+	}	
 	
 	.mypage_top{
 		text-align : center;
@@ -55,14 +54,14 @@
 		margin-top: 10px;
 	}
 	
-	#top_menu_2{
-		
+	#top_menu_2{		
 		border: 1px solid #94CCC4;
 		border-top : 6px solid #5D5D5D;
 		width: 273px;
 		height: 45px;
 		z-index: 0px;
 	}
+	
 	#top_menu_2 p{
 		margin: 0px;
 		margin-top: 10px;
@@ -108,6 +107,7 @@
 		color: #747474;
 		font-size: 14px;
 		font-weight: bold;
+		
 	}
 	
 	#under_menu_1{
@@ -116,6 +116,7 @@
 		border: 1px solid #94CCC4;
 		width: 273px;
 		height: 45px;
+		
 	}
 	
 	#under_menu_2{
@@ -157,57 +158,93 @@
 	
 	}
 	
-	.mypage_box{
-		width: 816px;
-		height: 150px;
-		background-color: #FCF8F2;
-		z-index: 0px;
-		padding-top: 5px;
-	}
-	
-	.mypage_box li{
-		color: #747474;
-		padding-top: 12px;
-		
-	}
-	
-	.mypage_answer{
+	.mypage_chart{
+		border-top: 3px solid #94CCC4;
+		border-bottom: 3px solid #94CCC4;
+		border-left: 1px solid #EAEAEA;
+		border-right: 1px solid #EAEAEA;
 		justify-content: center;
 		display: flex;
-		margin-left: 533px;
-		margin-top: 15px;
-		color: #94CCC4;
-		font-weight: bold;
-	}
-	
-	#mypage_box_empty{
-		height: 25px;
-		border-right: 2px solid #EAEAEA;
-		margin-left: 10px;
-		margin-right: 10px;
-	
-	}
-	
-	.mypage_qna_notice{
-		border: 1px solid #EAEAEA;
 		width: 760px;
-		height: 350px;
+		height : 225px;
 		margin-left: 26px;
-		margin-top: 10px;
-		border-top: 3px solid #94CCC4;
+		
+	
+	}
+	
+	#mypage_reserve{
+		background-color: #94CCC4;
+		color : #ffffff;
 		text-align: center;
+		width: 253px;
+		
 		
 	}
 	
-	.mypage_qna_notice img{
-		margin-top: 110px;
+	#mypage_reserve h2{
+		padding-top: 0px;
+		height: 5px;
 	}
 	
-	#mypage_qna_notice_btn{
-		margin-left: 638px;
+	#mypage_reserve h3{
+		padding-top: 0px;
+		height: 5px;
 	}
 	
-	#mypage_qna_notice_btn1{
+	#btn_mypage_reserve{
+		border-radius: 10px;
+		width: 100px;
+		height: 35px;
+		border: 1px solid #ffffff;
+		background-color: #ffffff;
+		color: #94CCC4;
+		font-weight: bold;
+		margin-top: 50px;
+		
+	
+	}
+	
+	#mypage_notice{
+		width: 253px;
+		text-align: center;
+		margin-top: 30px;
+		
+		
+	
+	}
+	
+	#mypage_notice_chart img{
+		margin-right: 25px;		
+		
+	}
+	
+	#mypage_notice_chart span{
+		vertical-align: 25px;
+		
+	}
+	
+	
+	#mypage_notice_class img{
+		margin-top : 15px;
+		margin-right: 5px;
+		
+	}
+	
+	#mypage_notice_class span{
+		vertical-align: 30px;
+		
+		
+	}
+	
+	#mypage_certificate{
+		background-color: #EAEAEA;
+		width: 253px;
+		text-align: center;
+		
+	
+	}
+	
+	#btn_mypage_certificate_1{
 		border-radius: 10px;
 		width: 150px;
 		height: 35px;
@@ -215,16 +252,60 @@
 		background-color: #94CCC4;
 		color: #ffffff;
 		font-weight: bold;
-		margin-top: 17px;
+		margin-top: 55px;
+	
 	}
 	
-	#container .column-side-left .column-side-right .column-middle{
-		width: 1200px;
-		margin: 0px auto;
-		padding: 20px;
-		justify-content: center;
-		display: flex;
-		/*border: 1px solid #bcbcbc;*/
+	#btn_mypage_certificate_2{
+		border-radius: 10px;
+		width: 150px;
+		height: 35px;
+		border: 1px solid #ffffff;
+		background-color: #ffffff;
+		color: #94CCC4;
+		font-weight: bold;
+		font-size: 13px;
+		margin-top: 30px;
+	
+	}
+	
+	#mypage_mydoc_chart{
+		width: 760px;
+		height: 340px;
+		border-top: 3px solid #94CCC4;
+		border-bottom: 3px solid #94CCC4;
+		border-left: 1px solid #EAEAEA;
+		border-right: 1px solid #EAEAEA;
+		margin-left: 26px;
+		margin-top: 30px;
+	
+	
+	}
+	
+	#mypage_mydoc_chart_title{
+		padding-left: 10px;
+		margin-top:7px;
+		border-bottom: 1px solid #EAEAEA;
+		width: 760px;
+		height: 33px;
+		
+	}
+	
+	#mypage_mydoc_chart_detail{
+		text-align: center;
+		vertical-align: 100px;
+		width: 760px;
+		height: 307px;
+	}
+	
+	
+   	#container .column-side-left .column-side-right .column-middle{
+	width: 1200px;
+	margin: 0px auto;
+	padding: 20px;
+	justify-content: center;
+	display: flex;
+	/*border: 1px solid #bcbcbc;*/
 	}
 	
 	  
@@ -243,7 +324,10 @@
 	  padding: 30px;
 	  text-align: center;
 	  font-size: 35px;
-	}*/
+	}
+	*/
+	
+	
 	
 	/* Create three unequal columns that floats next to each other */
 	.column {
@@ -308,55 +392,54 @@
 <body>
 
 	
-	<jsp:include page="header.jsp"></jsp:include>
+	<jsp:include page="/header.jsp"></jsp:include>
+	
 	
 
-	<div class="column-side-left" style="background-color:#aaa;">Column</div>
+	<div class="column-side-left">head</div>
 	  
 	  <!-- 메인 -->
 	<div id="container">
 	<div class="column-middle">
 		<div class="mypage_menu">
-			<div class="mypage_top">
-				<a href="myPage_1.jsp"><div id="top_menu_1"><p>나의 차트</p></div></a>
-		 		<a href="myPage_2.jsp"><div id="top_menu_2"><p>개인정보</p></div></a>
-		  		<a href="myPage_4.jsp"><div id="top_menu_3"><p>진료 예약 현황</p></div></a>
-		  	</div>
-		  	
-		  	<div class="mypage_under">
-				<a href="myPage_5.jsp"><div id="under_menu_1"><p>1:1 상담내역</p></div></a>
-		 		<div id="under_menu_2"><p>인터넷증명서 발급</p></div>
-		  		<a href="myPage_6.jsp"><div id="under_menu_3"><p>강좌신청내역</p></div></a>
-		  	</div>
+			<jsp:include page="myPageMenu.jsp"></jsp:include>
 		  	
 		  	<div class="mypage_detail">
-		  		
 		  		<div class="mypage_title">
-		  			<h2>1:1 상담내역</h2>
+		  		<h2>나의 차트</h2>
 		  		</div>
-		  		<div class="mypage_box">
-		  			<ul>
-		  				<li>의료상담, 건강상담 ‘1:1 전문의 상담’을 이용해 주십시오.</li>
-						<li>병원의 이용 관련된 문의는 고객의 소리에 문의하여 주십시오.</li>
-						<li>031-782-8300으로 문의 부탁 드립니다</li>
-		  			</ul>
+		  		<div class="mypage_chart">
+		  		<div id="mypage_reserve">
+		  			<h2>예약현황</h2><br>
+		  			<h3>0건</h3>
+		  			<div>
+		  				<button id="btn_mypage_reserve"><a href="/reserconfirm">예약확인</a></button>
+		  			</div>
 		  		</div>
-		  		<div class="mypage_answer">
-		  			<div>답변중 : 0개</div>
-		  			<div id="mypage_box_empty"></div>
-		  			<div>답변완료 : 0개</div>
+		  		<div id="mypage_notice">
+		  			<div id="mypage_notice_chart">
+		  			<img src="./img/chart.png" width="65" height="65">
+		  			<span>1:1상담내역</span>
+		  			</div>
+		  			<div id="mypage_notice_class">
+		  			<img src="./img/class.png" width="70" height="70">
+		  			<span>강좌 신청 내역</span>
+		  			</div>
 		  		</div>
-		  		<div class="mypage_qna_notice">
-		  			<img src="./img/answer.png" width="65" height="65"><br>
-		  			상담 내용이 없습니다.
-		  		
+		  		<div id="mypage_certificate">
+		  			<button id="btn_mypage_certificate_1"><a href="updateMember.jsp">개인정보수정</a></button>
+		  			<button id="btn_mypage_certificate_2">인터넷증명서 발급</button>
 		  		</div>
-		  		<div id="mypage_qna_notice_btn">
-		  			<button id="mypage_qna_notice_btn1">전문의 상담하기</button>
-		  		</div>
-		  		  	
+		  		</div>		  	
 		  	</div>
-		  		
+		  		<div id="mypage_mydoc_chart">
+		  			<div id="mypage_mydoc_chart_title">
+		  			최근 진료한 의료진
+		  			</div>
+		  			<div id="mypage_mydoc_chart_detail">
+		  			최근 1년간의 진료 내역이 없습니다.
+		  			</div>
+		  		</div>
 		  	
 	  	</div>
 	  		
@@ -366,7 +449,7 @@
 	  
 	
 	
-	<jsp:include page="footer1.jsp"></jsp:include>
+	<jsp:include page="/footer1.jsp"></jsp:include>
 
 	
 

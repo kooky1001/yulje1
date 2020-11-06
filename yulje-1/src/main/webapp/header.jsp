@@ -78,7 +78,7 @@
 						<ul>
 						<li><a href="login.jsp">로그인</a></li>
 						<li><a href="/join-allow">회원가입</a></li>
-						<li><a href="myPage_1.jsp">마이페이지</a></li>
+						<li><a href="/myPage_1">마이페이지</a></li>
 						<li><a href="#">증명서 발급 안내</a></li>
 						<li><a href="#">증명서 발급</a></li>
 						<li><a href="#">온라인 신청</a></li>

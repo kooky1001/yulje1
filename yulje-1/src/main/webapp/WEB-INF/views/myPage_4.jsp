@@ -149,126 +149,65 @@
 		background-color: #94CCC4;
 	}
 	
-	#mypage_title{
+	.mypage_title{
 		text-align: center;
 		height: 80px;
 		padding-top: 20px;
 		
-			
+	
 	}
 	
-	#mypage_box{
-		width: 816px;
-		height: 80px;
-		background-color: #FCF8F2;
-		z-index: 0px;
-		text-align: center; 
-		display: flex;
-		justify-content: center;
-		padding-top: 25px;
-		   
-   }
-   
-   #mypage_box_div1{				
-		height: 30px;
-		width: 150px;
-		color: #5D5D5D;
-		text-align: center;
-		
-   }
-   
-   #mypage_box_div2{				
-		height: 30px;
-		width: 150px;
-		text-align: center;
-		color : #94CCC4;
-		font-weight: bold;
-		border-bottom: 3px solid #94CCC4;
-   }
-   
-   #mypage_box_empty{
-		height: 30px;
-		border-right: 2px solid #EAEAEA;
-		margin-left: 10px;
-		margin-right: 10px;
-   
-   }
-   
-    #mypage_box_empty img{
-		margin-right: 10px;
-   
-   }
-   
-   #mypage_box_div1:hover{
-		color : #94CCC4;
-     	font-weight: bold;
-     	border-bottom: 3px solid #94CCC4;
-   }
-   
-   #mypage_box_div2:hover{
-		color : #94CCC4;
-     	font-weight: bold;
-     	border-bottom: 3px solid #94CCC4;
-   }
-   
-   
-		
 	.mypage_detail_under{
-		width: 817px;
+		width: 760px;
+		height: 375px;
 		margin-left: 26px;
 		margin-top: 1px;
-		
-	}
-	
-	
-	#mypage_title_sub{
-		width: 760px;
-		height: 400px;
 		border: 1px solid #EAEAEA;
 		border-top: 3px solid #94CCC4;
-		border-bottom: 3px solid #94CCC4;
-	}
-	
-	ul, li{
-		font-size: 14px;
-		margin-left: 10px;
-		margin-top: 10px;
-	}
-	
-	
-	
-	#mypage_title_sub h3{
-		text-align: center;
-		color: #5D5D5D;
-		font-weight: bold;
-		padding-top: 30px;
-		padding-bottom: 30px;
-	
-	}
-	
-	#mypage_title_idpw{
-		margin-top: 80px;
 		
+		
+	}
+	
+	.mypage_detail_under h3{
+		margin-top: 30px;
+		margin-left : 10px;
+	
+	}
+	
+	.mypage_detail_under li{
+		font-size: 14px;
+		margin-top: 25px;
+		margin-bottom: 25px;
+		margin-left : 10px;
+		font-weight: normal;
 	
 	}
 	
 	
-	#mypage_title_sub_span1{
-		margin-left: 220px;
-		color: #5D5D5D;
-				
+	textarea{
+		border: 1px solid #EAEAEA;
+		margin-left: 60px;
 	}
 	
-	#mypage_title_sub_span2{
-		margin-left: 220px;
-		color: #5D5D5D;
-			
+	.agreement_radio{
+		margin-top:15px;
+		justify-content: center;
+		display: flex;
+	
 	}
 	
-	#mypage_title_sub_span3{
-		margin-left: 220px;
-		color: #5D5D5D;
-			
+	#mypage_detail_myinfo_information{
+		margin-top: 25px;
+	}
+	
+	
+	.mypage_detail_myinfo{
+		margin-top:50px;
+		border: 1px solid #EAEAEA;
+		width: 760px;
+		height: 200px;
+		text-align: center;
+		
 	}
 	
 	.pw_input{
@@ -277,13 +216,7 @@
 		border: 1px solid #EAEAEA;
 	}
 	
-	#mypage_title_btn{
-		text-align: center;
-		width: 760px;
-		height: 150px;
-	}
-	
-	#mypage_title_btn1{
+	#mypage_detail_myinfo_btn1{
 		border-radius: 10px;
 		width: 150px;
 		height: 35px;
@@ -291,10 +224,10 @@
 		background-color: #94CCC4;
 		color: #ffffff;
 		font-weight: bold;
-		margin-top: 55px;
+		margin-top: 17px;
 	}
 	
-	#mypage_title_btn2{
+	#mypage_detail_myinfo_btn2{
 		border-radius: 10px;
 		width: 150px;
 		height: 35px;
@@ -302,9 +235,8 @@
 		background-color: #ffffff;
 		color: #94CCC4;
 		font-weight: bold;
-		margin-top: 55px;
+		margin-top: 17px;
 	}
-	
 	
 	#container .column-side-left .column-side-right .column-middle{
 		width: 1200px;
@@ -396,57 +328,79 @@
 <body>
 
 	
-	<jsp:include page="header.jsp"></jsp:include>
-	
+	<jsp:include page="/header.jsp"></jsp:include>
 
-	<div class="column-side-left" style="background-color:#aaa;">Column</div>
+	<div class="column-side-left">head</div>
 	  
 	  <!-- 메인 -->
 	<div id="container">
 	<div class="column-middle">
 		<div class="mypage_menu">
-			<div class="mypage_top">
-				<a href="myPage_1.jsp"><div id="top_menu_1"><p>나의 차트</p></div></a>
-		 		<a href="myPage_2.jsp"><div id="top_menu_2"><p>개인정보</p></div></a>
-		  		<a href="myPage_4.jsp"><div id="top_menu_3"><p>진료 예약 현황</p></div></a>
-		  	</div>
+			<jsp:include page="myPageMenu.jsp"></jsp:include>
 		  	
-		  	<div class="mypage_under">
-				<a href="myPage_5.jsp"><div id="under_menu_1"><p>1:1 상담내역</p></div></a>
-		 		<div id="under_menu_2"><p>인터넷증명서 발급</p></div>
-		  		<a href="myPage_6.jsp"><div id="under_menu_3"><p>강좌신청내역</p></div></a>
-		  	</div>
 		  	
 		  	<div class="mypage_detail">
-			  	<div id="mypage_box">
-	                <a href="myPage_2.jsp"><div id="mypage_box_div1">개인정보수정</div></a>
-	                 <div id="mypage_box_empty"></div>
-	                 <a href="myPage_3.jsp"><div id="mypage_box_div2">비밀번호 변경</div></a>
-	              </div>
-		  		<div id="mypage_title">
-		  			<h2>비밀번호 변경</h2>
+		  		
+		  		<div class="mypage_title">
+		  			<h2>진료예약현황</h2>
 		  		</div>
-		  	<div class="mypage_detail_under">
-		  		<div id="mypage_title_sub">
-		  		<ul>
-		  			<li>비밀번호는 영문 대소문자, 숫자, 특수문자 중 2종류 이상 조합하여 10~20자리입니다.</li>
-		  			<li>아이디와 동일한 비밀번호를 사용하는 것을 제한하고 있습니다.</li>
-		  			<li>현재 비밀번호 및 이전 비밀번호 등 동일한 비밀번호를 사용하는 것을 제한하고 있습니다.</li>
-				</ul>
-					<div id="mypage_title_idpw">
-			  			<span id="mypage_title_sub_span1"><input type="text" class="pw_input" placeholder="현재 비밀번호"></span><br>
-			  			<span id="mypage_title_sub_span2"> <input type="text" class="pw_input" placeholder="새 비밀번호"></span><br>
-			  			<span id="mypage_title_sub_span3"><input type="text" class="pw_input" placeholder="새 비밀번호 확인"></span><br>
-			  			
-		  			</div>
-		  		</div>
-		  		<div id="mypage_title_btn">
-		  			<button id="mypage_title_btn1">확인</button>
-		  			<button id="mypage_title_btn2">취소</button>
+		  		
+		  		<div class="mypage_detail_under">
+		  			<div>
+			  			<ul>
+			  				<h3>환자등록번호 확인</h3>
+							<li><h4>환자등록번호란 진료시 발급해드린 환자번호(8자리 숫자)로 진료 예약 조회 시 본인 확인을 위해 필요합니다.</h4></li>
+						</ul>
+					</div>
+					<div id="mypage_detail_agreement">
+					<textarea rows="10" cols="100" readonly="readonly">
+인터넷 진료예약 시 개인정보 수집, 이용 동의
+1. 수집하는 개인정보 항목 
+성명, 환자등록번호
+
+2. 수집이용 목적
+진단 및 치료를 위한 진료 예약
+
+3. 보유 및 이용 기간
+수집된 개인정보는 현재 페이지에서 병원 환자정보를 조회하고 즉시 폐기됩니다.
+
+
+4. 개인정보의 수집, 이용에 대한 동의 거부
+본인은 위와 같이 개인정보를 수집, 이용하는데 대한 동의를 거부할 권리가 있습니다. 단, 동의를 거부할 경우 진료예약 조회가 불가하오니 참고하시기 바랍니다.
+					</textarea>
+					
+					<div class="mypage_detail_agreement_radio">
+                    	<div class="agreement_radio">
+                        	<div class="input_radio">
+                           		<input type="radio" name="radio_check01" id="rdAgree1_1" />
+                           		<label for="rdAgree1_1">동의합니다.</label>
+                        </div>
+                        <div class="input_radio">
+                            <input type="radio" name="radio_check01" id="rdAgree1_2" />
+                            <label for="rdAgree1_2">동의하지 않습니다.</label>
+                        </div>
+                    	</div>
+                	</div>
+                	
+                	<div class="mypage_detail_myinfo">
+                		<div id="mypage_detail_myinfo_information">
+                			<span id="mypage_detail_myinfo_span1"><input type="text" class="pw_input" placeholder="성함"></span><br><br>
+			  				<span id="mypage_detail_myinfo_span2"> <input type="text" class="pw_input" placeholder="진료예약번호"></span><br>
+			  			</div>
+                		<div id="mypage_detail_myinfo_btn">
+                			<button id="mypage_detail_myinfo_btn1"><a href="listClinic.jsp">확인</a></button>
+                			<button id="mypage_detail_myinfo_btn2">취소</button>
+                		</div>
+                	</div>
+
+					
+						
+					
+					</div>
 		  		</div>
 		  		  	
 		  	</div>
-		  	</div>	
+		  		
 		  	
 	  	</div>
 	  		
@@ -455,7 +409,7 @@
 	  	
 	  
 	
-	<jsp:include page="footer1.jsp"></jsp:include>
+	<jsp:include page="/footer1.jsp"></jsp:include>
 
 	
 

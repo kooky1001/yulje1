@@ -5,8 +5,6 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<script src="https://kit.fontawesome.com/eef195c997.js" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="header.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 	* {
@@ -20,9 +18,12 @@
 		width: 819px;
 		height: 800px;
 		border: 1px solid #EAEAEA;
-		z-index: 5px;	
+		z-index: 5px;
 		margin-top: 200px;
-	}	
+	
+	}
+	
+	
 	
 	.mypage_top{
 		text-align : center;
@@ -54,14 +55,14 @@
 		margin-top: 10px;
 	}
 	
-	#top_menu_2{		
+	#top_menu_2{
+		
 		border: 1px solid #94CCC4;
 		border-top : 6px solid #5D5D5D;
 		width: 273px;
 		height: 45px;
 		z-index: 0px;
 	}
-	
 	#top_menu_2 p{
 		margin: 0px;
 		margin-top: 10px;
@@ -107,7 +108,6 @@
 		color: #747474;
 		font-size: 14px;
 		font-weight: bold;
-		
 	}
 	
 	#under_menu_1{
@@ -116,7 +116,6 @@
 		border: 1px solid #94CCC4;
 		width: 273px;
 		height: 45px;
-		
 	}
 	
 	#under_menu_2{
@@ -150,101 +149,141 @@
 		background-color: #94CCC4;
 	}
 	
-	.mypage_title{
+	#mypage_title{
 		text-align: center;
 		height: 80px;
 		padding-top: 20px;
 		
-	
+			
 	}
 	
-	.mypage_chart{
+	#mypage_box{
+		width: 816px;
+		height: 80px;
+		background-color: #FCF8F2;
+		z-index: 0px;
+		text-align: center; 
+		display: flex;
+		justify-content: center;
+		padding-top: 25px;
+		   
+   }
+   
+   #mypage_box_div1{				
+		height: 30px;
+		width: 150px;
+		color: #5D5D5D;
+		text-align: center;
+		
+   }
+   
+   #mypage_box_div2{				
+		height: 30px;
+		width: 150px;
+		text-align: center;
+		color : #94CCC4;
+		font-weight: bold;
+		border-bottom: 3px solid #94CCC4;
+   }
+   
+   #mypage_box_empty{
+		height: 30px;
+		border-right: 2px solid #EAEAEA;
+		margin-left: 10px;
+		margin-right: 10px;
+   
+   }
+   
+    #mypage_box_empty img{
+		margin-right: 10px;
+   
+   }
+   
+   #mypage_box_div1:hover{
+		color : #94CCC4;
+     	font-weight: bold;
+     	border-bottom: 3px solid #94CCC4;
+   }
+   
+   #mypage_box_div2:hover{
+		color : #94CCC4;
+     	font-weight: bold;
+     	border-bottom: 3px solid #94CCC4;
+   }
+   
+   
+		
+	.mypage_detail_under{
+		width: 817px;
+		margin-left: 26px;
+		margin-top: 1px;
+		
+	}
+	
+	
+	#mypage_title_sub{
+		width: 760px;
+		height: 400px;
+		border: 1px solid #EAEAEA;
 		border-top: 3px solid #94CCC4;
 		border-bottom: 3px solid #94CCC4;
-		border-left: 1px solid #EAEAEA;
-		border-right: 1px solid #EAEAEA;
-		justify-content: center;
-		display: flex;
-		width: 760px;
-		height : 225px;
-		margin-left: 26px;
-		
-	
 	}
 	
-	#mypage_reserve{
-		background-color: #94CCC4;
-		color : #ffffff;
+	ul, li{
+		font-size: 14px;
+		margin-left: 10px;
+		margin-top: 10px;
+	}
+	
+	
+	
+	#mypage_title_sub h3{
 		text-align: center;
-		width: 253px;
-		
-		
-	}
-	
-	#mypage_reserve h2{
-		padding-top: 0px;
-		height: 5px;
-	}
-	
-	#mypage_reserve h3{
-		padding-top: 0px;
-		height: 5px;
-	}
-	
-	#btn_mypage_reserve{
-		border-radius: 10px;
-		width: 100px;
-		height: 35px;
-		border: 1px solid #ffffff;
-		background-color: #ffffff;
-		color: #94CCC4;
+		color: #5D5D5D;
 		font-weight: bold;
-		margin-top: 50px;
+		padding-top: 30px;
+		padding-bottom: 30px;
+	
+	}
+	
+	#mypage_title_idpw{
+		margin-top: 80px;
 		
 	
 	}
 	
-	#mypage_notice{
-		width: 253px;
+	
+	#mypage_title_sub_span1{
+		margin-left: 220px;
+		color: #5D5D5D;
+				
+	}
+	
+	#mypage_title_sub_span2{
+		margin-left: 220px;
+		color: #5D5D5D;
+			
+	}
+	
+	#mypage_title_sub_span3{
+		margin-left: 220px;
+		color: #5D5D5D;
+			
+	}
+	
+	.pw_input{
+		width: 300px;
+		height: 40px;
+		border: 1px solid #EAEAEA;
+	}
+	
+	#mypage_title_btn{
 		text-align: center;
-		margin-top: 30px;
-		
-		
-	
+		width: 760px;
+		height: 150px;
 	}
 	
-	#mypage_notice_chart img{
-		margin-right: 25px;		
-		
-	}
-	
-	#mypage_notice_chart span{
-		vertical-align: 25px;
-		
-	}
-	
-	
-	#mypage_notice_class img{
-		margin-top : 15px;
-		margin-right: 5px;
-		
-	}
-	
-	#mypage_notice_class span{
-		vertical-align: 30px;
-		
-		
-	}
-	
-	#mypage_certificate{
-		background-color: #EAEAEA;
-		width: 253px;
-		text-align: center;
-		
-	
-	}
-	
-	#btn_mypage_certificate_1{
+	#mypage_title_btn1{
 		border-radius: 10px;
 		width: 150px;
 		height: 35px;
@@ -253,59 +292,27 @@
 		color: #ffffff;
 		font-weight: bold;
 		margin-top: 55px;
-	
 	}
 	
-	#btn_mypage_certificate_2{
+	#mypage_title_btn2{
 		border-radius: 10px;
 		width: 150px;
 		height: 35px;
-		border: 1px solid #ffffff;
+		border: 1px solid #94CCC4;
 		background-color: #ffffff;
 		color: #94CCC4;
 		font-weight: bold;
-		font-size: 13px;
-		margin-top: 30px;
-	
-	}
-	
-	#mypage_mydoc_chart{
-		width: 760px;
-		height: 340px;
-		border-top: 3px solid #94CCC4;
-		border-bottom: 3px solid #94CCC4;
-		border-left: 1px solid #EAEAEA;
-		border-right: 1px solid #EAEAEA;
-		margin-left: 26px;
-		margin-top: 30px;
-	
-	
-	}
-	
-	#mypage_mydoc_chart_title{
-		padding-left: 10px;
-		margin-top:7px;
-		border-bottom: 1px solid #EAEAEA;
-		width: 760px;
-		height: 33px;
-		
-	}
-	
-	#mypage_mydoc_chart_detail{
-		text-align: center;
-		vertical-align: 100px;
-		width: 760px;
-		height: 307px;
+		margin-top: 55px;
 	}
 	
 	
-   	#container .column-side-left .column-side-right .column-middle{
-	width: 1200px;
-	margin: 0px auto;
-	padding: 20px;
-	justify-content: center;
-	display: flex;
-	/*border: 1px solid #bcbcbc;*/
+	#container .column-side-left .column-side-right .column-middle{
+		width: 1200px;
+		margin: 0px auto;
+		padding: 20px;
+		justify-content: center;
+		display: flex;
+		/*border: 1px solid #bcbcbc;*/
 	}
 	
 	  
@@ -324,10 +331,7 @@
 	  padding: 30px;
 	  text-align: center;
 	  font-size: 35px;
-	}
-	*/
-	
-	
+	}*/
 	
 	/* Create three unequal columns that floats next to each other */
 	.column {
@@ -392,64 +396,47 @@
 <body>
 
 	
-	<jsp:include page="header.jsp"></jsp:include>
-	
+	<jsp:include page="/header.jsp"></jsp:include>
 	
 
-	<div class="column-side-left" style="background-color:#aaa;">Column</div>
+	<div class="column-side-left">head</div>
 	  
 	  <!-- 메인 -->
 	<div id="container">
 	<div class="column-middle">
 		<div class="mypage_menu">
-			<div class="mypage_top">
-				<a href="myPage_1.jsp"><div id="top_menu_1"><p>나의 차트</p></div></a>
-		 		<a href="myPage_2.jsp"><div id="top_menu_2"><p>개인정보</p></div></a>
-		  		<a href="myPage_4.jsp"><div id="top_menu_3"><p>진료 예약 현황</p></div></a>
-		  	</div>
-		  	
-		  	<div class="mypage_under">
-				<a href="myPage_5.jsp"><div id="under_menu_1"><p>1:1 상담내역</p></div></a>
-		 		<div id="under_menu_2"><p>인터넷증명서 발급</p></div>
-		  		<a href="myPage_6.jsp"><div id="under_menu_3"><p>강좌신청내역</p></div></a>
-		  	</div>
+			<jsp:include page="myPageMenu.jsp"></jsp:include>
 		  	
 		  	<div class="mypage_detail">
-		  		<div class="mypage_title">
-		  		<h2>나의 차트</h2>
+			  	<div id="mypage_box">
+	                <a href="myPage_2.jsp"><div id="mypage_box_div1">개인정보수정</div></a>
+	                 <div id="mypage_box_empty"></div>
+	                 <a href="myPage_3.jsp"><div id="mypage_box_div2">비밀번호 변경</div></a>
+	              </div>
+		  		<div id="mypage_title">
+		  			<h2>비밀번호 변경</h2>
 		  		</div>
-		  		<div class="mypage_chart">
-		  		<div id="mypage_reserve">
-		  			<h2>예약현황</h2><br>
-		  			<h3>0건</h3>
-		  			<div>
-		  				<button id="btn_mypage_reserve"><a href="/reserconfirm">예약확인</a></button>
+		  	<div class="mypage_detail_under">
+		  		<div id="mypage_title_sub">
+		  		<ul>
+		  			<li>비밀번호는 영문 대소문자, 숫자, 특수문자 중 2종류 이상 조합하여 10~20자리입니다.</li>
+		  			<li>아이디와 동일한 비밀번호를 사용하는 것을 제한하고 있습니다.</li>
+		  			<li>현재 비밀번호 및 이전 비밀번호 등 동일한 비밀번호를 사용하는 것을 제한하고 있습니다.</li>
+				</ul>
+					<div id="mypage_title_idpw">
+			  			<span id="mypage_title_sub_span1"><input type="text" class="pw_input" placeholder="현재 비밀번호"></span><br>
+			  			<span id="mypage_title_sub_span2"> <input type="text" class="pw_input" placeholder="새 비밀번호"></span><br>
+			  			<span id="mypage_title_sub_span3"><input type="text" class="pw_input" placeholder="새 비밀번호 확인"></span><br>
+			  			
 		  			</div>
 		  		</div>
-		  		<div id="mypage_notice">
-		  			<div id="mypage_notice_chart">
-		  			<img src="./img/chart.png" width="65" height="65">
-		  			<span>1:1상담내역</span>
-		  			</div>
-		  			<div id="mypage_notice_class">
-		  			<img src="./img/class.png" width="70" height="70">
-		  			<span>강좌 신청 내역</span>
-		  			</div>
+		  		<div id="mypage_title_btn">
+		  			<button id="mypage_title_btn1">확인</button>
+		  			<button id="mypage_title_btn2">취소</button>
 		  		</div>
-		  		<div id="mypage_certificate">
-		  			<button id="btn_mypage_certificate_1"><a href="updateMember.jsp">개인정보수정</a></button>
-		  			<button id="btn_mypage_certificate_2">인터넷증명서 발급</button>
-		  		</div>
-		  		</div>		  	
+		  		  	
 		  	</div>
-		  		<div id="mypage_mydoc_chart">
-		  			<div id="mypage_mydoc_chart_title">
-		  			최근 진료한 의료진
-		  			</div>
-		  			<div id="mypage_mydoc_chart_detail">
-		  			최근 1년간의 진료 내역이 없습니다.
-		  			</div>
-		  		</div>
+		  	</div>	
 		  	
 	  	</div>
 	  		
@@ -458,8 +445,7 @@
 	  	
 	  
 	
-	
-	<jsp:include page="footer1.jsp"></jsp:include>
+	<jsp:include page="/footer1.jsp"></jsp:include>
 
 	
 

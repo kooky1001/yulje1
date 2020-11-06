@@ -466,26 +466,16 @@ $(function() {
 <body>
 
    
-   <jsp:include page="header.jsp"></jsp:include>
+   <jsp:include page="/header.jsp">head</jsp:include>
    
 
-   <div class="column-side-left" style="background-color:#aaa;">Column</div>
+   <div class="column-side-left"></div>
      
      <!-- 메인 -->
    <div id="container">
    <div class="column-middle">
       <div class="mypage_menu">
-         <div class="mypage_top">
-				<a href="myPage_1.jsp"><div id="top_menu_1"><p>나의 차트</p></div></a>
-		 		<a href="myPage_2.jsp"><div id="top_menu_2"><p>개인정보</p></div></a>
-		  		<a href="myPage_4.jsp"><div id="top_menu_3"><p>진료 예약 현황</p></div></a>
-		  	</div>
-		  	
-		  	<div class="mypage_under">
-				<a href="myPage_5.jsp"><div id="under_menu_1"><p>1:1 상담내역</p></div></a>
-		 		<div id="under_menu_2"><p>인터넷증명서 발급</p></div>
-		  		<a href="myPage_6.jsp"><div id="under_menu_3"><p>강좌신청내역</p></div></a>
-		  	</div>
+         <jsp:include page="myPageMenu.jsp"></jsp:include>
            
            <div class="mypage_detail">
               <div id="mypage_box">
@@ -575,7 +565,7 @@ $(function() {
         
      
    
-   <jsp:include page="footer1.jsp"></jsp:include>
+   <jsp:include page="/footer1.jsp"></jsp:include>
 
    
 

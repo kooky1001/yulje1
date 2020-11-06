@@ -15,7 +15,7 @@
 	.mypage_menu{
 		margin :0px;
 		padding :0px;
-		width: 819px;
+		width: 819px;	
 		height: 800px;
 		border: 1px solid #EAEAEA;
 		z-index: 5px;
@@ -149,123 +149,68 @@
 		background-color: #94CCC4;
 	}
 	
-	#mypage_title{
+	.mypage_title{
 		text-align: center;
 		height: 80px;
 		padding-top: 20px;
 		
-			
+	
 	}
 	
-	#mypage_box{
+	.mypage_box{
 		width: 816px;
-		height: 80px;
+		height: 100px;
 		background-color: #FCF8F2;
 		z-index: 0px;
-		text-align: center; 
-		display: flex;
-		justify-content: center;
-		padding-top: 25px;
-		   
-   }
-   
-   #mypage_box_div1{				
-		height: 30px;
-		width: 150px;
+		padding-top: 5px;
 		text-align: center;
-		color : #94CCC4;
-     	font-weight: bold;
-     	border-bottom: 3px solid #94CCC4;
+		padding-top: 33px;
+	}
+	
+	.mypage_box span{
+		color: #747474;
+		font-weight: bold;
+		font-size: 20px;
 		
-   }
-   
-   #mypage_box_div2{				
-		height: 30px;
-		width: 150px;
-		color: #5D5D5D;
-		text-align: center;
-   }
-   
-   #mypage_box_empty{
-		height: 30px;
+	}
+	
+	.mypage_answer{
+		justify-content: center;
+		display: flex;
+		margin-left: 533px;
+		margin-top: 15px;
+		color: #94CCC4;
+		font-weight: bold;
+	}
+	
+	#mypage_box_empty{
+		height: 25px;
 		border-right: 2px solid #EAEAEA;
 		margin-left: 10px;
 		margin-right: 10px;
-   
-   }
-   
-   #mypage_box_div1:hover{
-		color : #94CCC4;
-     	font-weight: bold;
-     	border-bottom: 3px solid #94CCC4;
-   }
-   
-   #mypage_box_div2:hover{
-		color : #94CCC4;
-     	font-weight: bold;
-     	border-bottom: 3px solid #94CCC4;
-   }
-   
-   
-		
-	.mypage_detail_under{
-		width: 817px;
+	
+	}
+	
+	.mypage_qna_notice{
+		border: 1px solid #EAEAEA;
+		width: 750px;
+		height: 470px;
 		margin-left: 26px;
-		margin-top: 1px;
-		
-	}
-	
-	
-	#mypage_title_sub{
-		width: 760px;
-		height: 280px;
-		border: 1px solid #EAEAEA;
+		margin-top: 30px;
 		border-top: 3px solid #94CCC4;
-		border-bottom: 3px solid #94CCC4;
-	}
-	
-	#mypage_title_sub h3{
 		text-align: center;
-		color: #5D5D5D;
-		font-weight: bold;
-		padding-top: 55px;
-		padding-bottom: 30px;
-	
-	}
-	
-	#mypage_title_sub_span1{
-		margin-left: 250px;
-		color: #5D5D5D;
 		
-		
-			
 	}
 	
-	#mypage_title_sub_span2{
-		margin-left: 80px;
-		color: #5D5D5D;
-			
+	.mypage_qna_notice img{
+		margin-top: 165px;
 	}
 	
-	#mypage_title_sub_span3{
-		margin-left: 250px;
-		color: #5D5D5D;
-			
+	#mypage_qna_notice_btn{
+		margin-left: 638px;
 	}
 	
-	.pw_input{
-		width: 200px;
-		height: 40px;
-		border: 1px solid #EAEAEA;
-	}
-	
-	#mypage_title_btn{
-		text-align: center;
-		width: 760px;
-		height: 150px;
-	}
-	
-	#mypage_title_btn1{
+	#mypage_qna_notice_btn1{
 		border-radius: 10px;
 		width: 150px;
 		height: 35px;
@@ -273,20 +218,8 @@
 		background-color: #94CCC4;
 		color: #ffffff;
 		font-weight: bold;
-		margin-top: 55px;
+		margin-top: 17px;
 	}
-	
-	#mypage_title_btn2{
-		border-radius: 10px;
-		width: 150px;
-		height: 35px;
-		border: 1px solid #94CCC4;
-		background-color: #ffffff;
-		color: #94CCC4;
-		font-weight: bold;
-		margin-top: 55px;
-	}
-	
 	
 	#container .column-side-left .column-side-right .column-middle{
 		width: 1200px;
@@ -308,14 +241,12 @@
 	}
 	
 	/* Style the header */
-	/*
-	.header {
+	/*.header {
 	  background-color: #f1f1f1;
 	  padding: 30px;
 	  text-align: center;
 	  font-size: 35px;
-	}
-	*/
+	}*/
 	
 	/* Create three unequal columns that floats next to each other */
 	.column {
@@ -380,62 +311,44 @@
 <body>
 
 	
-	<jsp:include page="header.jsp"></jsp:include>
+	<jsp:include page="/header.jsp"></jsp:include>
 	
 
-	<div class="column-side-left" style="background-color:#aaa;">Column</div>
+	<div class="column-side-left">head</div>
 	  
 	  <!-- 메인 -->
 	<div id="container">
 	<div class="column-middle">
 		<div class="mypage_menu">
-			<div class="mypage_top">
-				<a href="myPage_1.jsp"><div id="top_menu_1"><p>나의 차트</p></div></a>
-		 		<a href="myPage_2.jsp"><div id="top_menu_2"><p>개인정보</p></div></a>
-		  		<a href="myPage_4.jsp"><div id="top_menu_3"><p>진료 예약 현황</p></div></a>
-		  	</div>
-		  	
-		  	<div class="mypage_under">
-				<a href="myPage_5.jsp"><div id="under_menu_1"><p>1:1 상담내역</p></div></a>
-		 		<div id="under_menu_2"><p>인터넷증명서 발급</p></div>
-		  		<a href="myPage_6.jsp"><div id="under_menu_3"><p>강좌신청내역</p></div></a>
-		  	</div>
+			<jsp:include page="myPageMenu.jsp"></jsp:include>
 		  	
 		  	<div class="mypage_detail">
-			  	<div id="mypage_box">
-	                <a href="myPage_2.jsp"> <div id="mypage_box_div1">개인정보수정</div></a>
-	                 <div id="mypage_box_empty"></div>
-	                  <a href="myPage_3.jsp"><div id="mypage_box_div2">비밀번호 변경</div></a>
-	              </div>
-		  		<div id="mypage_title">
-		  			<h2>개인정보수정</h2>
+		  		
+		  		<div class="mypage_title">
+		  			<h2>강좌신청내역</h2>
 		  		</div>
-		  	<div class="mypage_detail_under">
-		  		<div id="mypage_title_sub">
-		  			<h3>개인정보를 안전하게 보호하기 위해 비밀번호를 재확인 합니다.</h3>
-		  			<span id="mypage_title_sub_span1">아이디</span>
-		  			<span id="mypage_title_sub_span2"> login ID</span><br><br>
-		  			<span id="mypage_title_sub_span3">비밀번호</span>
-		  			<span><input type="text" class="pw_input"></span>
+		  		<div class="mypage_box">
+		  			<span>장미연님</span> <span>[0]건의 건강강좌가 신청되어 있습니다.</span>
 		  		</div>
-		  		<div id="mypage_title_btn">
-		  			<button id="mypage_title_btn1"> <a href="myPage_7.jsp">확인</a></button>
-		  			<button id="mypage_title_btn2">취소</button>
+		  		
+		  		<div class="mypage_qna_notice">
+		  			<img src="./img/answer.png" width="65" height="65"><br>
+		  			강좌신청 내역이 없습니다.
+		  		
 		  		</div>
+		  		
 		  		  	
 		  	</div>
-		  	</div>	
+		  		
 		  	
 	  	</div>
 	  		
 	</div>
 	</div>
 	  	
-	  
 	
 	
-	<jsp:include page="footer1.jsp"></jsp:include>
-	
+	<jsp:include page="/footer1.jsp"></jsp:include>
 
 	
 
