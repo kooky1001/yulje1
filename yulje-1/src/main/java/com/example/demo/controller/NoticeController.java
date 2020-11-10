@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+import java.io.File;
 import java.util.HashMap;
 
 import javax.servlet.http.HttpServletRequest;
@@ -9,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.example.demo.dao.NoticeDao;
@@ -18,16 +20,18 @@ import lombok.Setter;
 
 @Controller
 @Setter
-public class BoardController {
+public class NoticeController {
 
 	@Autowired
 	private NoticeDao dao;
 	
+//	페이징 처리를 위한 변수들
 	private int pageSIZE = 5;
 	private int totalRecord = 0;
 	private int totalPage = 1;
 	private int pageMAX = 5;
 	
+	//공지사항 리스트 불러오기
 	@RequestMapping("/listNotice")
 	public ModelAndView listNotice(@RequestParam(defaultValue = "1") int pageNUM) {
 		ModelAndView mav = new ModelAndView();
@@ -63,6 +67,7 @@ public class BoardController {
 		return mav;
 	}
 	
+	//공지사항 상세페이지
 	@RequestMapping("/detailNotice")
 	public ModelAndView detailNotice(int no) {
 		ModelAndView mav = new ModelAndView();
@@ -71,6 +76,7 @@ public class BoardController {
 		return mav;
 	}
 	
+	//공지사항 입력페이지로 가기
 	@RequestMapping(value = "/insertNotice", method = RequestMethod.GET)
 	public ModelAndView insertNoticeForm(@RequestParam(defaultValue = "0")int no) {
 		ModelAndView mav = new ModelAndView();
@@ -78,20 +84,29 @@ public class BoardController {
 		return mav;
 	}
 
+	//공지사항 입력 실행
 	@RequestMapping(value = "/insertNotice", method = RequestMethod.POST)
-	public ModelAndView insertNoticeSubmit(HttpServletRequest request) {
+	public ModelAndView insertNoticeSubmit(HttpServletRequest request, MultipartFile mf) {
 		ModelAndView mav = new ModelAndView();
 		
 		String path = request.getServletContext().getRealPath("/WEB-INF/upload");
-		//MultipartRequest multi = new MultipartRequest(request, path, 1024*1024*10, "UTF-8", new DefaultFileRenamePolicy());
-		
 		NoticeVo n = new NoticeVo();		
 		int no = dao.getNextNo();
+		if(!mf.isEmpty()) {
+			String fname = mf.getOriginalFilename();
+			try {
+				mf.transferTo(new File(path));
+			} catch (Exception e) {
+				// TODO: handle exception
+				System.out.println("mf:"+e.getMessage());
+			}
+			n.setFname(fname);
+		} else {
+			n.setFname("");
+		}
 		n.setNo(no);
 		n.setTitle(request.getParameter("title"));
 		n.setContent(request.getParameter("content"));
-		//String fname = multi.getFilesystemName("fname");
-		//n.setFname(fname);
 		
 		int re = dao.insert(n);
 		request.setAttribute("re", re);

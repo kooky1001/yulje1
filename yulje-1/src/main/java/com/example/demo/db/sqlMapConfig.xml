@@ -29,7 +29,6 @@
     <mapper resource="com/example/demo/db/Doc_ScheduleMapper.xml"/>
     <mapper resource="com/example/demo/db/Doc_EducationMapper.xml"/>
     <mapper resource="com/example/demo/db/Doc_CareerMapper.xml"/>
-<!--     <mapper resource="com/example/demo/db/AdviceMapper.xml"/> -->
     <mapper resource="com/example/demo/db/NoticeMapper.xml"/>
     <mapper resource="com/example/demo/db/ClinicMapper.xml"/>
   </mappers>

@@ -11,7 +11,7 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 import com.example.demo.vo.NoticeVo;
 
-public class BoardManager {
+public class NoticeManager {
 	
 	private static SqlSessionFactory sqlSessionFactory;
 	

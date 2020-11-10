@@ -2,6 +2,8 @@ package com.example.demo.vo;
 
 import java.sql.Date;
 
+import org.springframework.web.multipart.MultipartFile;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -16,4 +18,5 @@ public class NoticeVo {
 	private Date regdate;
 	private int hit;
 	private String fname;
+	private MultipartFile mf;
 }
