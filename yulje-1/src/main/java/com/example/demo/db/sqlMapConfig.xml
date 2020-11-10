@@ -6,6 +6,7 @@
 	<properties resource="com/example/demo/db/db.properties"/>
 	<typeAliases>
 		<typeAlias type="com.example.demo.vo.DoctorVo" alias="doctorVo"/>
+		<typeAlias type="com.example.demo.vo.DepartmentVo" alias="deptVo"/>
 		<typeAlias type="com.example.demo.vo.Doc_ScheduleVo" alias="scheVo"/>
 		<typeAlias type="com.example.demo.vo.Doc_CareerVo" alias="carVo"/>
 		<typeAlias type="com.example.demo.vo.Doc_EducationVo" alias="eduVo"/>
@@ -30,5 +31,6 @@
     <mapper resource="com/example/demo/db/Doc_CareerMapper.xml"/>
 <!--     <mapper resource="com/example/demo/db/AdviceMapper.xml"/> -->
     <mapper resource="com/example/demo/db/NoticeMapper.xml"/>
+    <mapper resource="com/example/demo/db/DepartmentMapper.xml"/>
   </mappers>
 </configuration>

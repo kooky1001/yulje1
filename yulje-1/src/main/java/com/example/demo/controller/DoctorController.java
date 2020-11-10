@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.example.demo.dao.Doc_CareerDao;
@@ -89,6 +90,15 @@ public class DoctorController {
 	
 	@RequestMapping("/listDoctor")
 	public void list() {}
+	
+	//의료진목록
+	@RequestMapping("/listDoctor1")
+	@ResponseBody
+	public List<DoctorVo> listDept() {
+		System.out.println("의료진목록 컨트롤러 동작");
+		List<DoctorVo> list  = dao.findAll();		
+		return list;
+	}
 	
 	@RequestMapping("/join")
 	public void join() {}

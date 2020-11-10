@@ -1,0 +1,32 @@
+진료과 - /listDept6.jsp
+과이름,소속과,과아이콘
+의료진버튼 -> 과번호실어서 넘김
+예약버튼 ->  과번호실어서 넘김
+
+sql
+추가  "insert into department(dept_no,dept_name,dept_group,dept_explain) values(?,?,?,?,?)";
+수정  "update department set dept_name=?,dept_group=?,dept_explain=? where dept_no=?";
+삭제  "delete department where dept_no=?";
+상세  "select * from department where dept_no=?";
+내과목록  "select * from department where dept_group='내과'";
+외과목록  "select * from department where dept_group='외과'";
+일반과목록  "select * from department where dept_group='일반과'";
++
+가나다순?  "select * from department order by dept_name";
+
+
+라디오버튼에서
+기본 - findAllGS, findAllIM, findAllDept
+가나다순 - findAllSort
+
+
+
+
+의료진 - /listDoctor
+이름,진료과,전문분야
+상세보기버튼 -> 의사번호실어서 넘김
+
+
+의료진상세 - /detailDoctor
+이름,진료과,직급,세부전공,스케줄,경력,학력
+진료예약버튼 -> 의사번호 실어서 넘김

@@ -427,136 +427,93 @@ footer{
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script type="text/javascript">
 $(function(){
-	
-	var list1 = function(){ //기본버튼 클릭시 동작할 ajax통신을 갖고있는 함수
-		$('#ajaxtest1').empty(); //버튼 누를때마다 계속 누적되는걸 막기위해 한번씩 지워줌
-		$('#ajaxtest1').empty();
-		$('#ajaxtest1').empty();
-// 		$("#ajaxtest3").html("")
-		
 
-	$.ajax("/listDept1", {success:function(data){ //ajax통신 응답으로 받아온 데이터를 data라는 변수에 담은것
-// 		console.log("기본버튼") 
-// 		console.log(data) //객체배열로 넘어오는지 확인
-		for(var i in data){ //배열안에있는 객체 수만큼 반복
-			var p = document.createElement("p") //각 객체의 내용(레코드한줄)을 담을 p태그. 
+	var deptname2 = [];
+	var image2 = [];
+	
+	var list1 = function(){
+	
+	
+// 	var n = 0;
+	var n; //이렇게만해도 배열에 알아서 잘들어감
+	
+		$.ajax("/listDept1", {success:function(data){
+// 		console.log(data)
+		for(var i in data){
 			var a = data[i] //반복돌때마다의 객체 하나하나를 a라고 치자.
+			
 // 			console.log(a.dept_group)
 			
 			if(a.dept_group=='내과'){
+				
 				for(var j in a){
-					var div = document.createElement("div") //span을 담을 div - span은 두개만들예정 : 이미지와 과이름
-					var span1 = document.createElement("span") //과이름을 담을 span태그
-					var span2 = document.createElement("span") //이미지를 담을 span태그
-					if(j=='dept_name'){ //반복중에 칼럼이 dept_name인걸 만났을때만 아랫부분 실행
-						var text = document.createTextNode(a[j]) //진료과이름을 문자열로 가져옴
-						span1.appendChild(text)//진료과이름을 span태그에 담음
+					
+					if(j=='dept_name'){ //칼럼이 dept_name 만났을때
+						//위에서 만든 배열변수에 담기
+						var text = document.createTextNode(a[j])
+						console.log(typeof text)
+						deptname2[n] = text
+						console.log(deptname2[n])
+						console.log(typeof deptname2[n])
 					}
-					if(j=='icon'){ //객체 내 반복중에 icon칼럼을 만나면 
-						var img = document.createElement("img") //img태그 생성
-						img.setAttribute("src", "./image/"+a.icon) // 지금의 객체안에있는 icon칼럼의 속성값을 src에 줌
-						img.setAttribute("width", 50) //대충 크기지정
-						img.setAttribute("height", 50)
-						span2.appendChild(img) //이미지를 span태그에 담음
+					if(j=='icon'){ //icon칼럼
+						//배열변수에 담기
+						var img = document.createTextNode(a[j])
+						image2[n] = img
+						console.log(image2[n])
 					}
-					p.appendChild(span1)//span태그들을 p태그에 담음
-					p.appendChild(span2)
 				}
-				var test = document.getElementById("ajaxtest1") //ajaxtest1이라는 아이디의 div를 향하는 변수
-				test.appendChild(p)//div에 p태그를 담음
+// 				n++
+// 				console.log(n)
 			}else if(a.dept_group=='외과'){
 				for(var j in a){
-					var div = document.createElement("div") //span을 담을 div - span은 두개만들예정 : 이미지와 과이름
-					var span1 = document.createElement("span") //과이름을 담을 span태그
-					var span2 = document.createElement("span") //이미지를 담을 span태그
-					if(j=='dept_name'){ //반복중에 칼럼이 dept_name인걸 만났을때만 아랫부분 실행
-						var text = document.createTextNode(a[j]) //진료과이름을 문자열로 가져옴
-						span1.appendChild(text)//진료과이름을 span태그에 담음
-					}
-					if(j=='icon'){ //객체 내 반복중에 icon칼럼을 만나면 
-						var img = document.createElement("img") //img태그 생성
-						img.setAttribute("src", "./image/"+a.icon) // 지금의 객체안에있는 icon칼럼의 속성값을 src에 줌
-						img.setAttribute("width", 50) //대충 크기지정
-						img.setAttribute("height", 50)
-						span2.appendChild(img) //이미지를 span태그에 담음
-					}
-					p.appendChild(span1)//span태그들을 p태그에 담음
-					p.appendChild(span2)
-				}
-				var test = document.getElementById("ajaxtest2") //ajaxtest2라는 아이디의 div를 향하는 변수
-				test.appendChild(p)//div에 p태그를 담음
-			}else { //일반과
-				for(var j in a){
-					var div = document.createElement("div") //span을 담을 div - span은 두개만들예정 : 이미지와 과이름
-					var span1 = document.createElement("span") //과이름을 담을 span태그
-					var span2 = document.createElement("span") //이미지를 담을 span태그
-					if(j=='dept_name'){ //반복중에 칼럼이 dept_name인걸 만났을때만 아랫부분 실행
-						var text = document.createTextNode(a[j]) //진료과이름을 문자열로 가져옴
-						span1.appendChild(text)//진료과이름을 span태그에 담음
-					}
-					if(j=='icon'){ //객체 내 반복중에 icon칼럼을 만나면 
-						var img = document.createElement("img") //img태그 생성
-						img.setAttribute("src", "./image/"+a.icon) // 지금의 객체안에있는 icon칼럼의 속성값을 src에 줌
-						img.setAttribute("width", 50) //대충 크기지정
-						img.setAttribute("height", 50)
-						span2.appendChild(img) //이미지를 span태그에 담음
-					}
-					p.appendChild(span1)//span태그들을 p태그에 담음
-					p.appendChild(span2)
-				}
-				var test = document.getElementById("ajaxtest3") //ajaxtest3이라는 아이디의 div를 향하는 변수
-				test.appendChild(p)//div에 p태그를 담음
-			}
-		}
-	}}) //ajax통신 끝
-	
-	} //list1함수 끝
-
-	var list2 = function(){
-
-		$('#ajaxtest1').empty();
-		$('#ajaxtest2').empty();
-		$('#ajaxtest3').empty();
-
-		$.ajax("/listDept2", {success:function(data){
-			console.log("가나다순버튼")
-			for(var i in data){
-				var p = document.createElement("p")
-				var a = data[i]
-				for(var j in a){
-					var div = document.createElement("div")
-					var span1 = document.createElement("span")
-					var span2 = document.createElement("span")
-					if(j=='dept_name'){
+					
+					if(j=='dept_name'){ //칼럼이 dept_name 만났을때
+						//위에서 만든 배열변수에 담기
 						var text = document.createTextNode(a[j])
-						span1.appendChild(text)
+						deptname2[n] = text
+						console.log(deptname2[n])
 					}
-					if(j=='icon'){ 
-						var img = document.createElement("img")
-						img.setAttribute("src", "./image/"+a.icon)
-						img.setAttribute("width", 50)
-						img.setAttribute("height", 50)
-						span2.appendChild(img)
+					if(j=='icon'){ //icon칼럼
+						//배열변수에 담기
+						var img = document.createTextNode(a[j])
+						image2[n] = img
+						console.log(image2[n])
 					}
-					p.appendChild(span1)
-					p.appendChild(span2)
 				}
-				var test = document.getElementById("ajaxtest1")
-				test.appendChild(p)
+			}else{
+				for(var j in a){
+					
+					if(j=='dept_name'){ //칼럼이 dept_name 만났을때
+						//위에서 만든 배열변수에 담기
+						var text = document.createTextNode(a[j])
+						deptname2[n] = text
+						console.log(deptname2[n])
+					}
+					if(j=='icon'){ //icon칼럼
+						//배열변수에 담기
+						var img = document.createTextNode(a[j])
+						image2[n] = img
+						console.log(image2[n])
+					}
+				}
 			}
-		}}) //ajax통신 끝
-	} //list2함수 끝
+			
+		} //json데이터 반복 끝
 
+	}}) //ajax통신 끝
+
+
+	} //list1()끝
+
+	
 	$("#ajaxtest_btn1").click(function(){
-		alert("버튼1")
- 		list1()
+		list1()
+// 		console.log(deptname2)
+// 		console.log(image2)
 	});
 	
-	$("#ajaxtest_btn2").click(function(){
-		alert("버튼2")
- 		list2()
-	});
-	
+
 	
 	
 	//호버에 쓰일 진료과 이름배열
@@ -705,12 +662,7 @@ $(function(){
      	</div>
      	<!-- 진료과 위에 검색이랑 정렬 놓는 부분 -->
      	<div class="main_search">
-     	
-     	<!-- 버튼테스트용 -->
-     	<div>
-     		<button id="ajaxtest_btn1">기본</button>
-     		<button id="ajaxtest_btn2">가나다순</button>
-     	</div>
+     	<button id="ajaxtest_btn1">기본</button>
      		<span class="search_radio">
 	     		<label class="container">
 					<input type="radio" name="array" checked="checked"/>
@@ -729,10 +681,6 @@ $(function(){
      		</div>
      	</div>
      	
-     	<div id="ajaxtest1" style="border: 1px solid black"></div>
-     	<div id="ajaxtest2" style="border: 1px solid black"></div>
-     	<div id="ajaxtest3" style="border: 1px solid black"></div>
-	    
 	     	<div class="main_left">
 	     	<!-- 왼쪽에 외과,내과,일반과 팻말 -->
 	     		<div class="main_left_item">

@@ -129,7 +129,73 @@ $(function () {
 // 	}, function () {
 // 		$(this).removeClass("active");		
 // 	});
-});
+
+
+
+var num; //버튼 클릭할때마다 바뀌어야될 변수라서 전역으로 사용할거라 바깥으로 빼둠.
+
+	var list = function(){ //각 과마다 목록을 불러오는 함수
+	
+	$.ajax("/listDoctor1", {success:function(data){ //컨트롤러에 서비스요청
+		for(var i in data){ //응답받은 데이터(객체배열) 수만큼 반복
+			var p = document.createElement("p") //p태그 생성.
+			var a = data[i] //현재 돌고있는 객체를 바라보는 a변수 선언.
+			
+			if(a.dept_no==num){ //num은 각 과별 고유번호. 특정 과에 해당하는 의사정보만 가져옴.
+				for(var j in a){ //객체 내에서 속성값 수만큼 반복
+					var div = document.createElement("div") //div태그
+					var span1 = document.createElement("span") //doc_name 담을곳
+					var span2 = document.createElement("span") //major 담을곳.
+					var span3 = document.createElement("span") //specialization 담을곳
+					var span4 = document.createElement("span") //doc_fname 담을곳
+					
+					if(j=='doc_name'){ //객체 내 속성값이 doc_name일때
+						var text = document.createTextNode(a[j]) //그 속성값 문자열로 가져오기. a[j]는 현재 반복중인 객체 a에서의 j번째 속성(컬럼)을 의미.
+						span1.appendChild(text) //span1태그에 담음
+					}
+					if(j=='major'){ //객체 내 속성값이 major일때.
+						var text = document.createTextNode(a[j])
+						span2.appendChild(text)
+					}
+					if(j=='specialization'){ //객체 내 속성값이 specialization일때
+						var text = document.createTextNode(a[j])
+						span3.appendChild(text)
+					}
+					if(j=='doc_fname'){ //객체 내 속성값이 doc_fname일때.
+						var img = document.createElement("img")
+						img.setAttribute("src", "./image/"+a.icon) //이미지 속성 추가. 이미지파일의 위치 지정
+						img.setAttribute("width", 50) //크기지정
+						img.setAttribute("height", 50)
+						span4.appendChild(img)
+					}
+					p.appendChild(span1) //아까전에 생성된 p태그에 위에 if들 쓸어담음
+					p.appendChild(span2)
+					p.appendChild(span3)
+					p.appendChild(span4)
+					
+				}
+				var test = document.getElementById("ajaxtest_output") //ajaxtest_output이라는 아이디를 가진 노드를 바라보는 변수 test선언 
+				test.appendChild(p) //test에 span들이 담긴 p태그 담음 == ajaxtest_output에 담음.
+			}
+		}
+	}}) //ajax통신끝.
+	} //함수끝
+
+	$("#ajaxtest_btn1").click(function(){
+		$('#ajaxtest_output').empty(); //매 클릭시마다 중첩되지않게 한번씩 비워줌
+		num = 1 //진료과 고유번호. 호흡기내과
+		list() //리스트를 불러오는 ajax통신이 담긴 함수 호출
+	});
+	
+	$("#ajaxtest_btn5").click(function(){
+		$('#ajaxtest_output').empty();
+		num = 5 //일반내과.
+		list()
+	});
+
+})
+
+
 </script>
 </head>
 <body>
@@ -161,7 +227,30 @@ $(function () {
 	  		<button>의료진 검색</button>
   		</span>
   	</div>
+  	<div id="ajaxtest">
+  		<!-- 여기에 테스트. 이부분도 사실 진료과 데이터를 가져와서 반복돌리고 자동생성되게해야함. 버튼도 아이콘으로 바꿔야되고 -->
+  		<div id="buttons">
+  		<button id="ajaxtest_btn1">호흡기내과</button>
+  		<button id="ajaxtest_btn2">순환기내과</button>
+  		<button id="ajaxtest_btn3">소화기내과</button>
+  		<button id="ajaxtest_btn4">알레르기내과</button>
+  		<button id="ajaxtest_btn5">내과(일반)</button>
+  		<button id="ajaxtest_btn6">간담췌외과</button>
+  		<button id="ajaxtest_btn7">위장관외과</button>
+  		<button id="ajaxtest_btn8">대장항문외과</button>
+  		<button id="ajaxtest_btn9">이식혈관외과</button>
+  		<button id="ajaxtest_btn10">외과(일반)</button>
+  		<button id="ajaxtest_btn11">신경과</button>
+  		<button id="ajaxtest_btn12">안과</button>
+  		<button id="ajaxtest_btn13">정형외과</button>
+  		<button id="ajaxtest_btn14">가정의학과</button>
+  		<button id="ajaxtest_btn15">산부인과</button>
+  		</div>
+  		<div id="ajaxtest_output">
+  		</div>
+  	</div>
   	<div class="main">
+  	
   		<span class="img"><img alt="" src="./image/yu.jpg" class="face"></span>
   		<span class="info">
   			
