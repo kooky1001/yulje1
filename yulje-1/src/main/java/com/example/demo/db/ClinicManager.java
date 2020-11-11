@@ -26,7 +26,7 @@ public class ClinicManager {
 		}
 	}
 	
-	//doctor list
+	//회원번호로 환자의 진료이력불러오기
 	public static List<ClinicVo> findByNoMem(int member_no) {
 		List<ClinicVo> list = null;
 		SqlSession session = sqlSessionFactory.openSession();
@@ -35,6 +35,7 @@ public class ClinicManager {
 		return list;
 	}
 	
+	//진료번호로 진료내역 상세보기
 	public static ClinicVo findByNoCli(int cli_no) {
 		ClinicVo c = null;
 		SqlSession session = sqlSessionFactory.openSession();

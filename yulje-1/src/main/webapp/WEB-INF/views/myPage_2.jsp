@@ -393,9 +393,9 @@
 		  	
 		  	<div class="mypage_detail">
 			  	<div id="mypage_box">
-	                <a href="myPage_2.jsp"> <div id="mypage_box_div1">개인정보수정</div></a>
+	                <a href="/myPage_2"> <div id="mypage_box_div1">개인정보수정</div></a>
 	                 <div id="mypage_box_empty"></div>
-	                  <a href="myPage_3.jsp"><div id="mypage_box_div2">비밀번호 변경</div></a>
+	                  <a href="/myPage_3"><div id="mypage_box_div2">비밀번호 변경</div></a>
 	              </div>
 		  		<div id="mypage_title">
 		  			<h2>개인정보수정</h2>
@@ -409,7 +409,7 @@
 		  			<span><input type="text" class="pw_input"></span>
 		  		</div>
 		  		<div id="mypage_title_btn">
-		  			<button id="mypage_title_btn1"> <a href="myPage_7.jsp">확인</a></button>
+		  			<button id="mypage_title_btn1"> <a href="/myPage_7">확인</a></button>
 		  			<button id="mypage_title_btn2">취소</button>
 		  		</div>
 		  		  	

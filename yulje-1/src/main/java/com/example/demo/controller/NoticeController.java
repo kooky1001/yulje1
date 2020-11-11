@@ -86,7 +86,7 @@ public class NoticeController {
 
 	//공지사항 입력 실행
 	@RequestMapping(value = "/insertNotice", method = RequestMethod.POST)
-	public ModelAndView insertNoticeSubmit(HttpServletRequest request, MultipartFile mf) {
+	public ModelAndView insertNoticeSubmit(NoticeVo n, HttpServletRequest request, MultipartFile mf) {
 		ModelAndView mav = new ModelAndView();
 		
 		String path = request.getServletContext().getRealPath("/WEB-INF/upload");
@@ -105,8 +105,6 @@ public class NoticeController {
 			n.setFname("");
 		}
 		n.setNo(no);
-		n.setTitle(request.getParameter("title"));
-		n.setContent(request.getParameter("content"));
 		
 		int re = dao.insert(n);
 		request.setAttribute("re", re);
