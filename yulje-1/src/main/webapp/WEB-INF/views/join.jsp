@@ -205,13 +205,8 @@
   						<td><input type="password" id="pwd2" name="pwd2" class="input"></td>
   					</tr>
   					<tr>
-  						<th>생년월일/성별</th>
-  						<td><input type="date" id="birth" name="birth" class="input">
-  							<select name="sex" id="sex">
-  								<option value="남">남</option>
-  								<option value="여">여</option>
-  							</select>
-  						</td>
+  						<th>주민등록번호</th>
+  						<td><input type="date" id="birth" name="birth" class="input"></td>
   					</tr>
   					<tr>
   						<th>연락처</th>

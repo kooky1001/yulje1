@@ -1,4 +1,4 @@
-package com.example.demo.db;
+package com.example.demo.controller;
 
 import javax.servlet.http.HttpSession;
 
